@@ -17,17 +17,17 @@ library(tidyr)
 
 Read the files in folder ‘UCI HAR Dataset’  and create data tables:
  filesPath <- "C:/Users/"UserNameHere"/Documents/data/UCI HAR Dataset"
-> # Read subject files
-> dataSubjectTrain <- tbl_df(read.table(file.path(filesPath, "train", "subject_train.txt")))
-> dataSubjectTest  <- tbl_df(read.table(file.path(filesPath, "test" , "subject_test.txt" )))
-> 
-> # Read activity files
-> dataActivityTrain <- tbl_df(read.table(file.path(filesPath, "train", "Y_train.txt")))
-> dataActivityTest  <- tbl_df(read.table(file.path(filesPath, "test" , "Y_test.txt" )))
-> 
-> #Read data files.
-> dataTrain <- tbl_df(read.table(file.path(filesPath, "train", "X_train.txt" )))
-> dataTest  <- tbl_df(read.table(file.path(filesPath, "test" , "X_test.txt" )))
+# Read subject files
+dataSubjectTrain <- tbl_df(read.table(file.path(filesPath, "train", "subject_train.txt")))
+dataSubjectTest  <- tbl_df(read.table(file.path(filesPath, "test" , "subject_test.txt" )))
+ 
+# Read activity files
+dataActivityTrain <- tbl_df(read.table(file.path(filesPath, "train", "Y_train.txt")))
+dataActivityTest  <- tbl_df(read.table(file.path(filesPath, "test" , "Y_test.txt" )))
+ 
+#Read data files.
+dataTrain <- tbl_df(read.table(file.path(filesPath, "train", "X_train.txt" )))
+dataTest  <- tbl_df(read.table(file.path(filesPath, "test" , "X_test.txt" )))
 
 Now run_analysis.R does the followinig - 1. Merges the training and the test sets to create one data set:
 # for both Activity and Subject files this will merge the training and the test sets by row binding 

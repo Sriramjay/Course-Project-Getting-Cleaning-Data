@@ -31,7 +31,7 @@ dataTest  <- tbl_df(read.table(file.path(filesPath, "test" , "X_test.txt" )))
 
 ###Now run_analysis.R does the followinig - 1. Merges the training and the test sets to create one data set:
 ###For both Activity and Subject files this will merge the training and the test sets by row binding 
-#and rename variables "subject" and "activityNum"
+###and rename variables "subject" and "activityNum"
 alldataSubject <- rbind(dataSubjectTrain, dataSubjectTest)
 setnames(alldataSubject, "V1", "subject")
 alldataActivity<- rbind(dataActivityTrain, dataActivityTest)
@@ -83,5 +83,5 @@ names(dataTable)<-gsub("Mag", "Magnitude", names(dataTable))
 names(dataTable)<-gsub("BodyBody", "Body", names(dataTable))
 
 ###5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject:
-##write to text file on disk
+###write to text file on disk
 write.table(dataTable, "TidyData.txt", row.name=FALSE)

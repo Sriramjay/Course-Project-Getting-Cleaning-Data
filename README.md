@@ -29,7 +29,7 @@ dataActivityTest  <- tbl_df(read.table(file.path(filesPath, "test" , "Y_test.txt
 dataTrain <- tbl_df(read.table(file.path(filesPath, "train", "X_train.txt" )))
 dataTest  <- tbl_df(read.table(file.path(filesPath, "test" , "X_test.txt" )))
 
-###Now run_analysis.R does the followinig - 1. Merges the training and the test sets to create one data set:
+###Now run_analysis.R does the following - 1. Merges the training and the test sets to create one data set:
 ###For both Activity and Subject files this will merge the training and the test sets by row binding 
 ###and rename variables "subject" and "activityNum"
 alldataSubject <- rbind(dataSubjectTrain, dataSubjectTest)
